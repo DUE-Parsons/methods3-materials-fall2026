@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 2 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 2</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+            <h2>(last week recap)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/meridians.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>Where is -73.99, 40.71?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hellgate-nypd-trees-0.png);">
+            <a class="source" href="https://hellgatenyc.com/parks-trees-nypd-precincts-sidewalk-parking/">hell gate</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hellgate-nypd-trees-1.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Environment/Forestry-Work-Orders/bdjm-n7q4/explore/query/SELECT%0A%20%20%60objectid%60%2C%0A%20%20%60wotype%60%2C%0A%20%20%60wostatus%60%2C%0A%20%20%60wopriority%60%2C%0A%20%20%60boroughcode%60%2C%0A%20%20%60communityboard%60%2C%0A%20%20%60buildingnumber%60%2C%0A%20%20%60streetname%60%2C%0A%20%20%60locationdetails%60%2C%0A%20%20%60actualfinishdate%60%2C%0A%20%20%60wocontract%60%2C%0A%20%20%60parkname%60%2C%0A%20%20%60parkzone%60%2C%0A%20%20%60cancelreason%60%2C%0A%20%20%60wocategory%60%2C%0A%20%20%60sanitationassigneddate%60%2C%0A%20%20%60sanitationremovaldate%60%2C%0A%20%20%60sanitationupdateddate%60%2C%0A%20%20%60wowoodremains%60%2C%0A%20%20%60woequipment%60%2C%0A%20%20%60zipcode%60%2C%0A%20%20%60citycouncil%60%2C%0A%20%20%60statesenate%60%2C%0A%20%20%60stateassembly%60%2C%0A%20%20%60congressional%60%2C%0A%20%20%60sanitationzone%60%2C%0A%20%20%60physicalid%60%2C%0A%20%20%60crossstreet1%60%2C%0A%20%20%60crossstreet2%60%2C%0A%20%20%60plantingspaceglobalid%60%2C%0A%20%20%60treepointglobalid%60%2C%0A%20%20%60inspectionglobalid%60%2C%0A%20%20%60globalid%60%2C%0A%20%20%60sidewalkdamage%60%2C%0A%20%20%60wowireconflict%60%2C%0A%20%20%60crewglobalid%60%2C%0A%20%20%60geometry%60%2C%0A%20%20%60closeddate%60%2C%0A%20%20%60canceldate%60%2C%0A%20%20%60createddate%60%2C%0A%20%20%60updateddate%60%2C%0A%20%20%60woentity%60%2C%0A%20%20%60projstartdate%60%2C%0A%20%20%60woproject%60%2C%0A%20%20%60recommendedspecies%60%2C%0A%20%20%60latitude%60%2C%0A%20%20%60longitude%60%2C%0A%20%20%60census_tract%60%2C%0A%20%20%60bin%60%2C%0A%20%20%60bbl%60%2C%0A%20%20%60nta%60%2C%0A%20%20%60location%60%0AWHERE%0A%20%20caseless_one_of%28%60wocategory%60%2C%20%22Tree%20Planting%22%29%0A%20%20AND%20caseless_one_of%28%60wostatus%60%2C%20%22Cancel%22%29/page/filter">open data link</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Let's talk about our mental maps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>How was drawing your map?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Let's talk about our maps in groups</h2>
+            <a href="inclass-mental-maps.html">mental maps recap</a>
+        </div>
+
+        <div class="slide">
+            <h2>cartography</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll generally use the term <em>cartography</em> when referring to how a map is designed</h2>
+        </div>
+
+        <div class="slide">
+            <h2>think about:</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>scale</li>
+                <li>hierarchy</li>
+                <li>color</li>
+                <li>symbology</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>scale</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/scale.jpg);">
+            <h2>scale</h2>
+        </div>
+
+        <div class="slide">
+            <h2>hierarchy</h2>
+        </div>
+
+        <div class="slide">
+            <h2>hierarchy</h2>
+            <p>"Important things must look important, and the most important thing should look the most important."</p>
+            <a class="source" href="http://books.google.com/books?id=vF0Chp0YZn0C">
+                Understanding Different Geographies
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>color</h2>
+        </div>
+
+        <div class="slide">
+            <h2>color</h2>
+            <p>Think about what the colors you are using mean to the viewer.</p>
+            <p>Use contrast to your advantage.</p>
+        </div>
+
+        <div class="slide">
+            <h2>symbology</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/symbols.png);">
+            <h2>symbology</h2>
+            <a class="source" href="http://www.svgopen.org/2008/papers/41-MapViewSVG__an_extension_for_ESRI_GIS_and_Mapping_Software/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mta-subway-map.png);">
+            <h2>looking at this map, let's apply our cartographic concepts</h2>
+            <a href="inclass-cartographic-concepts.html">in-class exercise</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mta-subway-map.png);">
+            <a class="source" href="https://www.mta.info/map/36946">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-osm.png);">
+        </div>
+
+        <div class="slide">
+            <h2>hierarchy</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/language_map.png);">
+            <a class="source" href="http://cartastrophe.wordpress.com/2012/01/02/an-unintelligible-language/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/language_map_zoom.png);">
+            <a class="source" href="http://cartastrophe.wordpress.com/2012/01/02/an-unintelligible-language/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hydro_sites.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2009/08/14/way-over-in-british-columbia/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hydro_sites_zoom.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2009/08/14/way-over-in-british-columbia/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/selectivity.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2009/08/14/way-over-in-british-columbia/">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>color</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/amish_us_no_legend.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/amish_us.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/amish_us_zoom.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/ny_county_legislatures_no_legend.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/ny_county_legislatures.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/diverging.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2016/05/25/how-much-a-decent-apartment-costs-you-in-every-county/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/color_brewer.png);">
+            <a class="source" href="http://colorbrewer2.org/">Color Brewer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mississippi_meanders.png);">
+            <a class="source" href="http://earthobservatory.nasa.gov/IOTD/view.php?id=6887">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mississippi_meanders_zoom.png);">
+            <a class="source" href="http://earthobservatory.nasa.gov/IOTD/view.php?id=6887">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mississippi_meanders_title.png);">
+            <a class="source" href="http://earthobservatory.nasa.gov/IOTD/view.php?id=6887">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>avoid the "island effect"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-island-covid.jpg);">
+            <a class="source" href="https://geospatialtraining.com/tutorial-creating-a-covid-19-map-of-nyc-in-arcgis-pro/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>what you include is significant</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what you include is significant...or will be interpreted as significant</h2>
+        </div>
+
+        <div class="slide">
+            <h2>same with what you exclude</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/see-rikers.png);">
+            <a class="source" href="http://untappedcities.com/2016/04/08/seerikers-guerrilla-campaign-adds-rikers-island-stickers-to-mta-maps-in-nyc/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mta-subway-map-21.png);">
+            <a class="source" href="https://new.mta.info/map/5256">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>let's start to apply what we've talked about in QGIS</h2>
+        </div>
+
+        <div class="slide">
+            <a href="inclass1.html">in-class exercises, styling with QGIS</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+                <li>layers</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+                <li>layers</li>
+                <li>features</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+                <li>layers</li>
+                <li>features</li>
+                <li>attributes</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>GIS concepts</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+                <li>layers</li>
+                <li>features</li>
+                <li>attributes</li>
+                <li>values</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>projects</h2>
+        </div>
+
+        <div class="slide">
+            <h2>projects</h2>
+            <p>how you organize your work in a GIS</p>
+        </div>
+
+        <div class="slide">
+            <h2>projects</h2>
+            <p>contain settings and layers</p>
+        </div>
+
+        <div class="slide">
+            <h2>layers</h2>
+        </div>
+
+        <div class="slide">
+            <h2>layers</h2>
+            <p>generally represent one type of thing being mapped</p>
+        </div>
+
+        <div class="slide">
+            <h2>layers</h2>
+            <p>include styles for your data</p>
+        </div>
+
+        <div class="slide">
+            <h2>features</h2>
+        </div>
+
+        <div class="slide">
+            <h2>features</h2>
+            <p>each shape in a layer is a feature</p>
+        </div>
+
+        <div class="slide">
+            <h2>attributes</h2>
+        </div>
+
+        <div class="slide">
+            <h2>attributes</h2>
+            <p>a layer usually has numerous attributes that describe its features</p>
+        </div>
+
+        <div class="slide">
+            <h2>values</h2>
+        </div>
+
+        <div class="slide">
+            <h2>values</h2>
+            <p>a feature has a value for each attribute</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/layers.png);"></div>
+
+        <div class="slide" style="background-image: url(img/gis_vector_raster.jpg);"></div>
+
+        <div class="slide" style="background-image: url(img/gis_raster.jpg);"></div>
+
+        <div class="slide" style="background-image: url(img/gis_vector.jpg);"></div>
+
+        <div class="slide">
+            <h2>spot these in QGIS</h2>
+            <ul style="list-style: disc">
+                <li>projects</li>
+                <li>layers</li>
+                <li>features</li>
+                <li>attributes</li>
+                <li>values</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS interface</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-interface-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-interface-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-interface-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-interface-3.png);">
+        </div>
+
+
+        <div class="slide">
+            <h2>looking at features, attributes, and values</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-1.png); background-size: 50%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-1.png); background-size: 50%">
+            <h2>identify features</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-2.png);">
+            <h2>the identified feature's attributes and values appear on the right</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-3.png);">
+            <h2>right-click, open attribute table</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes-4.png);">
+            <h2>all attributes and values for all features in the layer</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll be using layers' attributes more next week</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>vector spatial data types</h2>
+        </div>
+
+        <div class="slide">
+            <h2>vector spatial data types</h2>
+            <ul style="list-style: disc;">
+                <li>shapefile</li>
+                <li>geojson</li>
+                <li>geopackage</li>
+                <li>KML</li>
+                <li>CSV</li>
+                <li>...and others!</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>we will talk more about these next time</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Projections and coordinate reference systems (CRS)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll use <em>projection</em> and <em>CRS</em> interchangeably</h2>
+        </div>
+
+        <div class="slide">
+            <h2><em>projection</em> and <em>CRS</em></h2>
+            <p>how you determine where coordinates actually are on the earth</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/earth-shapes.jpg);">
+            <a class="source" href="https://mapschool.io/#the-shape-of-the-earth">mapschool.io</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/harvey-houston-sinking-map.jpg);">
+            <a class="source" href="https://twitter.com/geo_gif/status/904808613339848704">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/harvey-houston-sinking-tweet.png);">
+            <a class="source" href="https://twitter.com/geo_gif/status/904808613339848704">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>but what if you want to turn those coordinates into something that works on a 2d plane (like paper)?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mercator.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/orange_projection.jpg);">
+            <a class="source" href="http://csc.noaa.gov/geozone/happy-birthday-mercator/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projections_faces.png);">
+            <a class="source" href="http://flowingdata.com/2014/01/13/map-projections-illustrated-with-a-face/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projections-interactive.png);">
+            <a class="source" href="https://d3og.com/vlandham/9216751/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projection_families.png);">
+            <a class="source" href="http://docs.qgis.org/2.0/en/docs/gentle_gis_introduction/coordinate_reference_systems.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/earth_wind_map.png);">
+            <a class="source" href="http://earth.nullschool.net/">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <p>projections mainly distort</p>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>area (equivalence)</li>
+                <li>shape (conformity)</li>
+                <li>distance</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mercator_puzzle.png);">
+            <a class="source" href="http://bramus.github.io/mercator-puzzle-redux/">
+                mercator puzzle
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tissot_mercator.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tissot_mollweide.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tissot_oblique_mercator.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/un-projection-vote.png);">
+            <a class="source" href="https://www.theguardian.com/world/2026/sep/04/un-vote-world-map-mercator-equal-earth-africa">
+                the guardian
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>usually you will pick a projection for your project to make your data look good</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/us-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/us-albers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-2263.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-settings.png);"></div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);"></div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);">
+            <h2>to do this, change your project's projection</h2>
+        </div>
+
+        <div class="slide">
+            <h2>not sure which projection to use?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);">
+            <h2>search in qgis</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projections-rankin.png);">
+            <h2>peruse this table</h2>
+            <a class="source" href="http://www.radicalcartography.net/index.html?projectionref">Rankin's projections table</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projestions.png);">
+            <h2>consider using projestions</h2>
+            <a class="source" href="https://projest.io/ns/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/state_plane.jpg);">
+            <a class="source" href="http://gis.tulaliptribes-nsn.gov/Home/FrequentlyAskedQuestions.aspx">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <h2>best for New York area, many city datasets use this</h2>
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>for now, try to remember the codes <em>2263</em> and <em>4326</em></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you will encounter projections in three ways in QGIS:</h2>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment (when QGIS doesn't know which projection the data should be in)</li>
+            </ol>
+        </div>
+
+
+        <div class="slide">
+            <h2>for next time:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for next time:</h2>
+            <ol>
+                <li>Make a small scale (zoomed out) map of a region in the world</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <h2>for next time:</h2>
+            <ol>
+                <li>Make a small scale (zoomed out) map of a region in the world</li>
+                <li>Make a large scale (zoomed in) map of a part of NYC</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <h2>for next time:</h2>
+            <ol>
+                <li>Make a small scale (zoomed out) map of a region in the world</li>
+                <li>Make a large scale (zoomed in) map of a part of NYC</li>
+                <li>Initial project thoughts</li>
+            </ol>
+        </div>
+
+    </body>
+</html>
