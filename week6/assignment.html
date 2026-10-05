@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Assignment 5 | Methods 3</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>Assignment 5</h1>
+            </header>
+
+            <section>
+                <p>Geoprocessing tools give you the means to overlay multiple vector layers in order to modify the layers and potentially combine them. You are most likely going to find the following geoprocessing functions to be the most useful:</p>
+                <ul>
+                    <li>clipping</li>
+                    <li>buffers</li>
+                    <li>difference</li>
+                </ul>
+                <p>Buffers can be especially useful when talking about <em>proximity</em>, and you'll apply buffers in this week's assignment.</p>
+                <p>In the part of the city you have been focusing on, use buffers to make a statement with a map about how many features from one layer are near (or far from) features in another layer. More concretely, you might look at:</p>
+                <ul>
+                    <li>How many <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95">car crashes</a> happen within 25 feet (or some other distance) of a <a href="https://data.cityofnewyork.us/Transportation/Bicycle-Routes/7vsa-caz7">bike lane</a>?</li>
+                    <li>How many <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">311 requests</a> of a particular type have been made within 1/2 mile of a <a href="https://data.cityofnewyork.us/Education/School-Point-Locations/jfju-ynrr">school</a>?</li>
+                    <li>How many <a href="http://insideairbnb.com/get-the-data/">Airbnb Listings</a> are within 1/4 mile of a <a href="https://data.cityofnewyork.us/Transportation/Subway-Stations/arq3-7z49">subway entrance</a>?</li>
+                    <li>How many <a href="https://data.cityofnewyork.us/Housing-Development/Map-of-NYCHA-Developments/i9rv-hdr5">NYCHA developments</a> are within 1/2 mile of a <a href="https://data.cityofnewyork.us/Public-Safety/Hurricane-Evacuation-Centers-Map-/ayer-cga7">hurricane evacuation center</a>?</li>
+                    <li><strong>Something else</strong> related to your interests or research. Typically you will have one layer that you are buffering (could be points, lines, or polygons) and another layer of points that you are counting within the buffered area. Please get in touch if you're having a hard time finding relevant data!</li>
+                </ul>
+                <p>The process will typically look like this:</p>
+                <ol>
+                    <li>Open both layers.</li>
+                    <li>Create a buffer on the layer that you will aggregate points within.</li>
+                    <li>Count points in polygons with the buffered layer and your point layer. You want the counts to be on the buffered layer (so if you're following the first example above, count car crashes in the buffered bike lanes).</li>
+                    <li>Make a choropleth or some other style using the count of points.</li>
+                </ol>
+                <p>See if you can also answer these questions:</p>
+                <ul>
+                    <li>How many of the points are within the buffers you created?</li>
+                    <li>What percentage of the points are within the buffers you created?</li>
+                </ul>
+                <p>Create a PDF of your map using a print layout. Include map elements as is useful, and consider using text elements in the layout to share your answers to the above questions.</p>
+                <p>Share your work here including a short summary of your work. Explain what you created and how you did so. What did you have problems with? What did you enjoy? What would you like to know how to do next?</p>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
