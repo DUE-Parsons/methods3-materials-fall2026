@@ -17,20 +17,18 @@
                 <ol>
                     <li>We will geocode an excerpt of the 40,329 <a href="https://data.cityofnewyork.us/Business/License-Applications/ptev-4hud/">applications for a license</a> to sell tobacco in New York City since 1998.</li>
                     <li>First you need to make sure there is an address column with building number and street in one field.</li>
-                    <li>In Excel, open <strong>license_applications/tobacco_excerpt.csv</strong> and create a street address field from two columns: "Building Number" and "Street". You can use the CONCATENATE function.</li>
-                    <li>Open QGIS and install the <strong>MMQGIS Plugin</strong>.</li>
-                    <li>In the new MMQIS dropdown, select <strong>Geocode &gt; Geocode CSV with Web Service</strong>.</li>
+                    <li>In Excel, open <strong>license_applications/tobacco_excerpt.csv</strong> and create a street address field from these columns: "Building Number", "Street", "City", "State", and "Zip". You can use the CONCATENATE function to do this.</li>
+                    <li>Open QGIS and install the <strong>All Geocoders at Once</strong> plugin.</li>
+                    <li>Drag and drop the <strong>tobacco_excerpt</strong> CSV you edited.</li>
+                    <li>In the new <strong>Plugins &gt; All Geocoders at Once</strong> dropdown, select <strong>Geocode by any service</strong>.</li>
                     <li>In this dialog:
                         <ol>
-                            <li>Open the version of <strong>tobacco_excerpt.csv</strong> you created with an address field.</li>
-                            <li>Set <strong>Web Service</strong> = <strong>US Census Bureau</strong></li>
-                            <li>Name your Output File Name and Not Found Output List.</li>
-                            <li>Click Apply</li>
+                            <li>Select the version of <strong>tobacco_excerpt</strong> layer.</li>
+                            <li>Set <strong>address field</strong> and set <strong>geocoder</strong> to <strong>Esri (ArcGis)</strong></li>
+                            <li>Click <strong>Geocode</strong></li>
                         </ol>
                     </li>
-                    <li>Add a baselayer using QuickMapServices to see where the geocoded points are</li>
-                    <li>Open the Not Found Output List to see if any stores were not successfully geocoded.</li>
-                    <li>If you can determine the error in the address of the ungeocoded addresses, you may want to correct the addresses and geocode again.</li>
+                    <li>Add a baselayer using QuickMapServices to see where the geocoded points are, confirm they're in reasonable places</li>
                 </ol>
             </section>
 
