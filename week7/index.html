@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 7 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 7</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <!--
+        <div class="slide" style="background-image: url(img/assignment-carla.png);">
+            <a class="source">Carla</a>
+        </div>
+        -->
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>OpenStreetMap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <a class="source" href="https://www.openstreetmap.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <h2>a free map of the world</h2>
+            <a class="source" href="https://www.openstreetmap.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <h2>kinda like a giant shapefile of the world</h2>
+            <a class="source" href="https://www.openstreetmap.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-lat.png);">
+            <a class="source" href="https://www.latimes.com/projects/homeless-sleeping-maps/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-lat-attribution.png);">
+            <a class="source" href="https://www.latimes.com/projects/homeless-sleeping-maps/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-routing.png);">
+            <a class="source" href="https://www.latimes.com/projects/homeless-sleeping-maps/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/access-map.png);">
+            <a class="source" href="https://www.accessmap.io/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-orientation.png);">
+            <a class="source" href="https://geoffboeing.com/2019/09/urban-street-network-orientation/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>OSM has often grown in response to crises</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/haiti1.png);">
+            <p>Haiti in OpenStreetMap before 2010 earthquake</p>
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/haiti2.png);">
+            <p>Haiti in OpenStreetMap after 2010 earthquake</p>
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-registered-users.png);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Stats">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-db-stats.png);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Stats">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>what do people map?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>anything semi-permanent and usually observable on the ground</h2>
+        </div>
+
+        <div class="slide">
+            <h2>not for historical things</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openhistoricalmap.png);">
+            <a class="source" href="https://www.openhistoricalmap.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openhistoricalmap.png);">
+            <h2>there is a related project for historical data</h2>
+            <a class="source" href="https://www.openhistoricalmap.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>how do people add to OSM?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-add-building.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-add-building.png);">
+            <h2>a decent amount of tracing</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers.png);">
+            <a class="source" href="http://fieldpapers.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>you have some geometries from tracing or surveying, how do you describe them?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-attribute-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tags-union-square.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tags-bmt-broadway.png);">
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+                <li>and most of those columns would be empty (eg 'electrified')</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+                <li>and most of those columns would be empty (eg 'electrified')</li>
+                <li>what you could map would be predetermined</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>key-value pairs</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>leisure=park</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>name=Union Square West</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>we make them up as we go!</p>
+        </div>
+
+        <div class="slide">
+            <h2>folksonomy</h2>
+        </div>
+
+        <div class="slide">
+            <h2>folksonomy</h2>
+            <p>a collaborative system of categorization</p>
+        </div>
+
+        <div class="slide">
+            <h2>you can tag things any way you want</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if you want your data to be useful it's worth knowing how others map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-wiki.png);">
+            <a class="source" href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfountain">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-wiki.png);">
+            <h2>the OSM wiki documents tags</h2>
+            <a class="source" href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfountain">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-taginfo.png);">
+            <a class="source" href="https://taginfo.openstreetmap.org/keys/building#values">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-taginfo.png);">
+            <h2>taginfo can show you how tags are currently used</h2>
+            <a class="source" href="https://taginfo.openstreetmap.org/keys/building#values">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-add-building.png);">
+            <h2>usually people trace aerial imagery to add data to OSM</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rapid.png);">
+            <a class="source" href="https://rapideditor.org/rapid#background=Bing&datasets=fbRoads,msBuildings&disable_features=boundaries&map=15.20/-11.9961/17.4753">rapid</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rapid.png);">
+            <h2>tracing aerial imagery can be tedious, Rapid uses machine learning to find likely features</h2>
+            <a class="source" href="https://rapideditor.org/rapid#background=Bing&datasets=fbRoads,msBuildings&disable_features=boundaries&map=15.20/-11.9961/17.4753">rapid</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tasking.png);">
+            <a class="source" href="https://tasks.openstreetmap.us/projects/312/tasks">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tasking.png);">
+            <h2>not sure what to map? check out the tasking manager</h2>
+            <a class="source" href="https://tasks.openstreetmap.us/projects/312/tasks">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>how do you get data out?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/interline-extracts.png);">
+            <a class="source" href="https://www.interline.io/osm/extracts/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/interline-extracts.png);">
+            <h2>if you need a whole city</h2>
+            <a class="source" href="https://www.interline.io/osm/extracts/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geofabrik-extracts.png);">
+            <a class="source" href="https://download.geofabrik.de/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geofabrik-extracts.png);">
+            <h2>if you need a whole region</h2>
+            <a class="source" href="https://download.geofabrik.de/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-quickosm-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-quickosm-0.png);">
+            <h2>if you only need a few feature types</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-quickosm-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-quickosm-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-quickosm-1.png);">
+            <h2>not sure what to search for?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <h2>go to <a href="https://openstreetmap.org">openstreetmap.org</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <h2>find something you would like to get data for</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-0.png);">
+            <h2>right-click on it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-query-3.png);">
+            <h2>use the tags you find</h2>
+        </div>
+
+        <div class="slide">
+            <h2>other ways to map dense data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>hexbins</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/la-times-wildfires.png);">
+            <a class="source" href="https://www.latimes.com/wildfires-map/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stop_frisk.png);">
+            <a class="source" href="http://freecity.commons.gc.cuny.edu/2013/12/02/maps-of-nypd-stops-2011/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tree_density.png);">
+            <a class="source" href="http://anitagraser.com/2012/03/04/mapping-density-with-hexagonal-grids/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hexbins-germany-streets.png);">
+            <a class="source" href="https://www.zeit.de/feature/streetdirectory-streetnames-origin-germany-infographic-english">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/why-hexagons.png);">
+            <a class="source" href="https://pro.arcgis.com/en/pro-app/3.0/tool-reference/spatial-statistics/h-whyhexagons.htm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-create-grid.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-create-grid.png);">
+            <h2>first, create a grid</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-grid.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-grid.png);">
+            <h2>then, use Count Points in Polygon to find the count per hexagon</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-hexbins.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>heatmaps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <h2>heatmaps attempt to show probability over an area</h2>
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap2.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/profane_mountains.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2011/01/24/no-swearing-in-utah/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gs-0.png);"></div>
+
+        <div class="slide" style="background-image: url(img/gs-1.png);"></div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <h2>heatmaps look at the covered area as a raster made of pixels</h2>
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+            <h2><em>radius</em>: the area around a point that point influences</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+            <h2><em>rows</em> and <em>columns</em>: the resolution of the output raster, in pixels</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/heatmap-cell-size.png);">
+            <a class="source" href="https://gistbok.ucgis.org/bok-topics/kernels-and-density-estimation">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-2.png);">
+            <h2>style with <em>singleband psuedocolor</em></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-3.png);">
+            <img src="img/no.gif" style="position: absolute; top: 55%; left: 20%; width: 20%;" />
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-4.png);">
+            <h2>consider a rectangle with a gradient fill instead</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-4.png);">
+            <h2>add a rectangle and style it with gradient fill</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rect1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/rect2.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-heatmaps.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio.png);">
+            <a href="https://location.foursquare.com/products/studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio.png);">
+            <h2>Foursquare Studio</h2>
+            <a href="https://location.foursquare.com/products/studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-china-rivers.png);">
+            <a href="https://studio.foursquare.com/public/012a3e7b-1767-4326-a91a-aab9f43319d6" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-30-minutes.png);">
+            <a href="https://studio.foursquare.com/public/1e22faab-59a2-4834-b80e-9c093d84ff4b" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-shipping-routes.png);">
+            <a href="https://studio.foursquare.com/public/f513365e-6d2d-4479-9493-e1c8fa6082b5" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>previously Unfolded</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>previously Unfolded, so if you're looking for help you'll sometimes see references to "unfolded"</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>came out of the dataviz team at Uber</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-pricing.png);">
+            <a href="https://location.foursquare.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Foursquare Studio should feel familiar to you after QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-spatial-join.png);">
+            <a href="https://medium.com/foursquare-direct/understanding-spatial-join-in-unfolded-studio-76209fbeb27c" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-home.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-add-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-add-data-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-interactions.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-basemaps.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-charts.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-time.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-foursquare-studio.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+
+    </body>
+</html>
