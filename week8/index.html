@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 8 | Methods 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 8</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-adriana.png);">
+            <a class="source">Adriana</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-ellie.png);">
+            <a class="source">Ellie</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio.png);">
+            <a href="https://location.foursquare.com/products/studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio.png);">
+            <h2>Foursquare Studio</h2>
+            <a href="https://location.foursquare.com/products/studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-china-rivers.png);">
+            <a href="https://studio.foursquare.com/public/012a3e7b-1767-4326-a91a-aab9f43319d6" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-30-minutes.png);">
+            <a href="https://studio.foursquare.com/public/1e22faab-59a2-4834-b80e-9c093d84ff4b" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-shipping-routes.png);">
+            <a href="https://studio.foursquare.com/public/f513365e-6d2d-4479-9493-e1c8fa6082b5" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>previously Unfolded</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>previously Unfolded, so if you're looking for help you'll sometimes see references to "unfolded"</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <h2>came out of the dataviz team at Uber</h2>
+            <a href="https://location.foursquare.com/resources/blog/news/introducing-unfolded-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-pricing.png);">
+            <a href="https://location.foursquare.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Foursquare Studio should feel familiar to you after QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-spatial-join.png);">
+            <a href="https://medium.com/foursquare-direct/understanding-spatial-join-in-unfolded-studio-76209fbeb27c" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-home.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-add-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-add-data-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-interactions.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-basemaps.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-charts.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-time.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/movebank-study.png);">
+            <a href="https://datarepository.movebank.org/entities/datapackage/534b6861-c139-4ab9-abfd-c7a043e8570f/full" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/movebank-map.png);">
+            <a href="https://www.movebank.org/cms/webapp?gwt_fragment=page=search_map" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-foursquare-studio.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+
+        <div class="slide" style="background-image: url(img/project-manon-0.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-1.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-2.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-3.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-4.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>models</h2>
+        </div>
+
+        <div class="slide">
+            <h2>models aka composite indices</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>models are simplified descriptions of reality</h2>
+        </div>
+
+        <div class="slide">
+            <h2>models attempt to answer questions we don't have complete data for</h2>
+        </div>
+
+        <div class="slide">
+            <h2>where in the US do people lack access to food?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usda-map.png);">
+            <a class="source" href="https://www.ers.usda.gov/data-products/food-access-research-atlas/go-to-the-atlas/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usda-method-0.png);">
+            <a class="source" href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usda-method-1.png);">
+            <a class="source" href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>where in LA do people most need affordable housing?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/lyric-model.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2017/projects/boyle-heights-affordable-housing-needs-assessment/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>where in LA do people need more parks?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/la-parks.png);">
+            <a class="source" href="http://lacountyparkneeds.org/final-report/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>where is affordable housing most threatened in NYC?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/anhd-affordable-housing.png);">
+            <a class="source" href="https://risk.anhd.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/svi.png);">
+            <a class="source" href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/la-index-neighborhood-change.png);">
+            <a class="source" href="https://www.arcgis.com/home/item.html?id=57e9231c3bd34d44ae49b309b0cb440e">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/model-sni.png);">
+            <a class="source" href="http://lacountyparkneeds.org/final-report/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/model-sni-variables.png);">
+            <a class="source" href="https://www.nyc.gov/site/planning/zoning/districts-tools/fresh-food-stores.page#ongoing">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ca-healthy-places.png);">
+            <a class="source" href="https://www.healthyplacesindex.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>seek out a model that suits your needs</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it's okay to critique a model and change it</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can also make up your own models</h2>
+        </div>
+
+        <div class="slide">
+            <h2>when you make your own, try to test the model</h2>
+        </div>
+
+        <div class="slide">
+            <h2>where in Queens are renters most likely to be negatively affected by Airbnb listings?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll model this using:</h2>
+            <ul style="list-style: disc;">
+                <li>median income</li>
+                <li>percentage of renters</li>
+                <li>number of Airbnb listings</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/inside-airbnb.png);">
+            <a class="source" href="http://insideairbnb.com/get-the-data.html">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>we want scores that are lower for less of an effect, higher for a greater effect</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll scale each field down to a 0 &rarr; 1 range</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arcgis-composite-index-0.png);">
+            <a class="source" href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/how-calculate-composite-index-works.htm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arcgis-composite-index-1.png);">
+            <a class="source" href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/how-calculate-composite-index-works.htm">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>for example, median income goes from 15474 to 151964</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for example, median income goes from 15474 to 151964</h2>
+            <h2>tracts closer to 151964 will be closer to 0 (less effect)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for example, median income goes from 15474 to 151964</h2>
+            <h2>tracts closer to 15474 will be closer to 1 (more effect)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/normalize-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/normalize-0.png);">
+            <pre class="prettyprint" style="background-color: rgba(255, 255, 255, 0.8);"><code>scale_linear( "med_income", 
+    15474, 151964,
+    1, 0)</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/normalize-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/normalize-1.png);">
+            <h2>always sort the new column in the attribute table to confirm that it worked</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/normalize-2.png);">
+        </div>
+
+        <div class="slide">
+            <h2>then we can add each of these scaled fields together and know 0 is the lowest and 3 is the highest</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if you have <code>s_income</code>, <code>s_renters</code> and <code>s_airbnb</code>, you can add them together to get your model value (index)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/model-add.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-modeling.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>Urban Reviewer</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer-full.png);">
+            <a href="https://596acres.github.io/urbanreviewer/" target="_blank">urban reviewer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/596.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/596-signs.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/596-rockaways.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-streetview.png);">
+            <h2>
+                <a href="https://www.google.com/maps/place/Edgemere+Urban+Renewal+Park/@40.595588,-73.776975,3a,75y,172.62h,90t/data=!3m4!1e1!3m2!1sZgWcG17VxRvOezZpdWXGkA!2e0!4m6!1m3!3m2!1s0x0:0xae6844ceae037acd!2sEdgemere+Urban+Renewal+Park!3m1!1s0x0:0xae6844ceae037acd!6m1!1e1" target="_blank">Edgemere Urban Renewal Park</a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs.jpg);">
+            <a class="source" href="http://596acres.org/en/lot/4158370033/" target="_blank">
+                596 Acres
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs-zoom.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs-zoom.jpg);">
+            <h2>call Parks and say "where's our park?"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park.png);">
+            <h2>
+                <a href="https://www.google.com/maps/place/Edgemere+Urban+Renewal+Park/@40.595588,-73.776975,17z/data=!4m6!1m3!3m2!1s0x0:0xae6844ceae037acd!2sEdgemere+Urban+Renewal+Park!3m1!1s0x0:0xae6844ceae037acd" target="_blank">Edgemere Urban Renewal Park</a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/moses.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fitzgerald-urban-renewal.jpg);">
+            <a class="source" href="https://muse.jhu.edu/book/11514">Fitzgerald</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-1968.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-satellite.png);">
+            <h2>2014</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-now.png);">
+            <h2>2026</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-curbed.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://kensinger.blogspot.com/">Nathan Kensinger</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/spura.jpg);">
+            <a class="source" href="http://www.nycedc.com/project/seward-park-mixed-use-development-project">NYC EDC</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/lincoln-center.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://performingartseducators.org/index.php/fourth-post/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cadman-plaza.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://www.panoramio.com/photo/34791344">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>let's map them!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we weren't the first to have this idea</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968.png);">
+            <h2>Community Development Program Progress Report (1968)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-map-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-arverne-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984.png);">
+            <h2>Atlas of Urban Renewal (1984)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-manhattan.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-e14th.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-e14th-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-letter.png);">
+            <h2>FOIL</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-paper.jpg);">
+            <h2>FOILed!</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-letter-inspection.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bronx-park-south-plan.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bronx-park-south-plan-detail.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/plan-map.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-google-drive.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/crown-heights-google-drive.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/crown-heights-google-drive.png);">
+            <h2>thanks, volunteers!</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bbl.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/disappointed.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel_arrow.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel_arrow2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tax-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tax-map-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-shp.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer-full.png);">
+            <a href="https://596acres.github.io/urbanreviewer/" target="_blank">urban reviewer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seward-park.png);">
+            <a href="https://596acres.github.io/urbanreviewer/#map=17/40.7154/-73.9864&plan=Seward+Park" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seward-park-data.png);">
+            <a href="https://github.com/596acres/urbanreviewer/blob/gh-pages/data/geojson/us/ny/nyc/Manhattan/Seward%20Park.geojson" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-farm.png);">
+        </div>
+
+    </body>
+</html>
