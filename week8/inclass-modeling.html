@@ -23,13 +23,13 @@
                         <pre><code>scale_linear("med_income", 
     15474, 151964,
     1, 0)</code></pre>
-                        Add an <strong>s_</strong> at the beginning of the new field name to indicate that it is scaled. In this case, <strong>med_income</strong> becomes <strong>s_income</strong> (since you can only use 10 characters in a name). <strong>s_income</strong> should be a decimal number field with length 10 and precision 8.
+                        Add an <strong>s_</strong> at the beginning of the new field name to indicate that it is scaled. In this case, <strong>med_income</strong> becomes <strong>s_income</strong> (since you can only use 10 characters in a name). <strong>s_income</strong> should be a decimal number field.
                             </li>
                             <li>Follow a similar process for <strong>n_airbnb</strong> (calculated by counting the Airbnb listings per tract):
                         <pre><code>scale_linear("n_airbnb", 
     <strong>minimum points</strong>, <strong>maximum points</strong>,
     0, 1)</code></pre>
-                        You'll need to find the minimum and maximum values for <strong>n_airbnb</strong>. Make the resulting field <strong>s_airbnb</strong>, also a decimal number with length 10 and precision 8.
+                        You'll need to find the minimum and maximum values for <strong>n_airbnb</strong>. Make the resulting field <strong>s_airbnb</strong>, also a decimal number.
                             </li>
                         </ol>
                     </li>
