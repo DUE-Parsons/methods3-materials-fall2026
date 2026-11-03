@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 10 | Methods 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 10</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+            <h2>how does a web basemap work?</h2>
+        </div>
+
+        <div class="slide">
+            <p>(a few of these slides are adapted from these excellent <a href="http://maptime.github.io/anatomy-of-a-web-map/#45">Maptime slides</a>)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>most webmaps start with a basemap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>basemaps are tiled</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>tiles are 256 x 256 pixel images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>they use the same <em>zoom</em>, <em>x</em>, and <em>y</em> values, so they're interchangeable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a href="http://www.openwhatevermap.xyz/" class="source">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-2.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>as you zoom in, the number of tiles quadruples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>if you made tiles for all of zoom 18 you'd have nearly 69 <em>billion</em> images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+            <h2>that's why browsers only load what you need to see</h2>
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+        </div>
+
+        <div class="slide">
+            <h2>each tile is just an image on the internet</h2>
+            <p>https://tile.openstreetmap.org/{z}/{x}/{y}.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <p style="background: white;">https://tile.openstreetmap.org/0/0/0.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+            <h2>these tiles use OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+            <h2>lately it's also likely to see vector tiles, where the actual data is loaded in tiles</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so how do you <em>make</em> base maps?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it depends!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>in theory you can make tiles on your own</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>but many mapmakers turn to Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <a href="https://www.mapbox.com/mapbox-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>not free, but free up to a point</h2>
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>unfortunately QGIS and Foursquare Studio integrations are currently broken</h2>
+        </div>
+
+        <div class="slide">
+            <h2>creating styles in Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-go-to-studio.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-landing.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-select-base-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-new.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-settings.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-style-changes.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-mapbox.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can add your own data to Mapbox maps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-data-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-data-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-data-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-data-3.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-mapbox-data.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>for the most part, cartographic conventions hold with basemaps</h2>
+        </div>
+
+        <div class="slide">
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>scale</li>
+                <li>hierarchy</li>
+                <li>color</li>
+                <li>symbology</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>but with basemaps, be aware that <em>zooming</em> and <em>panning</em> change how it will be viewed</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/surging-seas.png);">
+            <a class="source" href="https://ss2.climatecentral.org/#12/40.6211/-73.9170?show=satellite&projections=0-K14_RCP85-SLR&level=9&unit=feet&pois=hide">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/basemap-densho.png);">
+            <a class="source" href="https://maps.densho.org/sitesofshame/manzanar/?style=default&lat=36.7274&lon=-118.1536&z=15.33">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-historical-ny.png);">
+            <a class="source" href="https://mappinghny.com/map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/land-grab-universities.png);">
+            <a class="source" href="https://www.landgrabu.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wapo-renters.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2016/05/25/how-much-a-decent-apartment-costs-you-in-every-county/?noredirect=on&utm_term=.32ddb5129c24">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-mapbox-broken.png);">
+            <a class="source" href="https://docs.foursquare.com/analytics-products/docs/maps-basemaps">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare-studio-mapbox-broken.png);">
+            <h2>using Mapbox styles in Foursquare Studio used to work but is broken</h2>
+            <a class="source" href="https://docs.foursquare.com/analytics-products/docs/maps-basemaps">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-qgis-0.png);">
+            <a class="source" href="https://docs.mapbox.com/help/tutorials/mapbox-arcgis-qgis/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-qgis-0.png);">
+            <h2>using Mapbox tiles in QGIS works</h2>
+            <a class="source" href="https://docs.mapbox.com/help/tutorials/mapbox-arcgis-qgis/#add-your-map-in-qgis">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Mapbox generally shines when it comes to writing your own code</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-gl-js.png);">
+            <a class="source" href="https://codepen.io/ebrelsford/pen/jEWgJaN">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-gl-js-popup.png);">
+            <a class="source" href="https://codepen.io/ebrelsford/pen/xbZvNqK?editors=0010">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-gl-examples.png);">
+            <a class="source" href="https://docs.mapbox.com/mapbox-gl-js/example/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>MapTiler</h2>
+        </div>
+
+        <div class="slide">
+            <h2>MapTiler is better in some ways for QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler.png);">
+            <a class="source" href="https://www.maptiler.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-home.png);">
+            <a class="source" href="https://www.maptiler.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-new.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-publish.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis.png);">
+            <a class="source" href="https://www.maptiler.com/qgis-plugin/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-plugin.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-browse.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-credentials.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-style.png);">
+            <h2>you can now customize your style in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-style.png);">
+            <h2>when you change projections, the style nicely reprojects</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maptiler-qgis-export.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-maptiler.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>more ways to get data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>connecting to servers to get data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-2.png);">
+          <h2>add a new connection with the WFS URL</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-3.png);">
+          <h2>connect, select a layer, and add it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-5.png);">
+          <h2>this is a vector file exactly like a shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wfs-fao-5.png);">
+          <h2>you can export it to a shapefile if you don't want to rely on the server</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-0.png);">
+            <a class="source" href="https://www.geoseer.net/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-0.png);">
+          <h2>this is a search engine for WFS servers</h2>
+            <a class="source" href="https://www.geoseer.net/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-1.png);">
+            <a class="source" href="https://www.geoseer.net/s.php?q=immigration+australia">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-1.png);">
+            <h2>look for WFS (web feature service) URLs</h2>
+            <a class="source" href="https://www.geoseer.net/s.php?q=immigration+australia">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-1.png);">
+            <h2>WMS (web map service) is useful, too, but is only raster</h2>
+            <a class="source" href="https://www.geoseer.net/s.php?q=immigration+australia">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoseer-2.png);">
+            <a class="source" href="https://www.geoseer.net/rl.php?ql=c1d8f230601b3f44&p=1&q=immigration%20australia#">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-0.png);">
+          <h2>you could also look for Esri FeatureServer URLs</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-0.png);">
+          <h2>for what we're doing, FeatureServer = WFS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-qgis.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/feature-server-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/esri-feature-server-ulster.png);">
+            <a class="source" href="https://services2.arcgis.com/18GPlQz4EhvHT4ph/ArcGIS/rest/services/Ulster_Contours_Index/FeatureServer">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dcp-mapserver-0.png);">
+            <a class="source" href="https://www.nyc.gov/content/planning/pages/resources#datasets">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dcp-mapserver-1.png);">
+            <a class="source" href="https://tiles.arcgis.com/tiles/GfwWNkhOj9bNBqoJ/arcgis/rest/services/NYC_Georeferenced_Zoning_Maps/MapServer">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dcp-mapserver-1.png);">
+          <h2>MapServer is an Esri server that provides images of maps</h2>
+            <a class="source" href="https://tiles.arcgis.com/tiles/GfwWNkhOj9bNBqoJ/arcgis/rest/services/NYC_Georeferenced_Zoning_Maps/MapServer">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dcp-mapserver-2.png);"></div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-3.png);"></div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-3.png);">
+          <h2>create a new connection</h2>
+        </div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-4.png);"></div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-4.png);">
+          <h2>connect, select the layer, and add it</h2>
+        </div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-5.png);"></div>
+        <div class="slide" style="background-image: url(img/dcp-mapserver-6.png);"></div>
+
+        <div class="slide">
+            <h2>try it out: search for a WFS or FeatureServer URL you could use</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Getting data from Wikipedia</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tableau-wikipedia.png);">
+            <a class="source" href="https://www.tableau.com/blog/excavating-data-gems-wikipedia-50966">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wikipedia-lists.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/Wikipedia:Featured_lists">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wikipedia-heritage-0.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/List_of_World_Heritage_in_Danger">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wikipedia-heritage-1.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/List_of_World_Heritage_in_Danger">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wikipedia-heritage-2.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/List_of_World_Heritage_in_Danger">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wikipedia-heritage-mapped.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/List_of_World_Heritage_in_Danger">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Getting data from PDFs</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nycha-pdf-0.png);">
+            <a class="source" href="https://www.nyc.gov/assets/nycha/downloads/pdf/pdb2022.pdf">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nycha-pdf-1.png);">
+            <a class="source" href="https://www.nyc.gov/assets/nycha/downloads/pdf/pdb2022.pdf">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawrapper-pdf.png);">
+            <a class="source" href="https://academy.datawrapper.de/article/135-how-to-extract-data-out-of-pdfs">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/smallpdf-extract.png);">
+            <a class="source" href="https://smallpdf.com/edit-pdf">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/smallpdf-convert.png);">
+            <a class="source" href="https://smallpdf.com/pdf-to-excel">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/pdf-extracted.png);">
+        </div>
+
+
+        <div class="slide">
+            <h2>it's common to work on multiple maps for one project</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/jakob-title.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2016/projects/the-legacy-of-urban-renewal-in-new-york-city-/">Jakob Winkler</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/jakob-slide-2.jpg);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2016/projects/the-legacy-of-urban-renewal-in-new-york-city-/">Jakob Winkler</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/jakob-slide.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2016/projects/the-legacy-of-urban-renewal-in-new-york-city-/">Jakob Winkler</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/jakob-slide-3.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2016/projects/the-legacy-of-urban-renewal-in-new-york-city-/">Jakob Winkler</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/abby-title.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/re-mapping-resilience/">Abby Zan</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/abby-0.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/re-mapping-resilience/">Abby Zan</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/abby-1.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/re-mapping-resilience/">Abby Zan</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/abby-2.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/re-mapping-resilience/">Abby Zan</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/eduarda-title.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2017/projects/reclaiming-public-space-in-brasilia-/">Eduarda Aun</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/eduarda-0.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2017/projects/reclaiming-public-space-in-brasilia-/">Eduarda Aun</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/eduarda-1.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2017/projects/reclaiming-public-space-in-brasilia-/">Eduarda Aun</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/eduarda-2.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2017/projects/reclaiming-public-space-in-brasilia-/">Eduarda Aun</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/eduarda-3.png);">
+            <a class="source">Eduarda Aun</a>
+        </div>
+
+        <div class="slide">
+            <h2>next time:</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>more ways to get maps online</li>
+                <li>more QGIS plugins</li>
+            </ul>
+        </div>
+
+    </body>
+</html>
