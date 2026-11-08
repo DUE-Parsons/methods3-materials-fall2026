@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 11 | Methods 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 11</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+            <h2>3D in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-new-3d.png); background-size: 50%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/buildings-3d.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-dem-1ft.png);">
+            <a class="source" href="https://data.cityofnewyork.us/City-Government/1-foot-Digital-Elevation-Model-DEM-/dpc8-z3jc">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-dem-noaa.png);">
+            <a class="source" href="https://www.fisheries.noaa.gov/inport/item/64732">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-dem-noaa-files.png);">
+            <a class="source" href="https://coast.noaa.gov/htdata/raster5/elevation/NYC_topobathy_BE_DEM_2017_9307/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/noaa-data-viewer.png);">
+            <a class="source" href="https://coast.noaa.gov/dataviewer/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapterhorn.png);">
+            <a class="source" href="https://mapterhorn.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapterhorn-settings.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapterhorn-settings.png);">
+            <div style="background-color: white;">https://tiles.mapterhorn.com/{z}/{x}/{y}.webp</div>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dem-walkthrough.png);">
+            <a class="source" href="https://opengislab.com/blog/2018/3/20/3d-dem-visualization-in-qgis-30">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-3d-dem.png); background-size: 50%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-3d-rhino.png);">
+            <a class="source" href="https://www.youtube.com/watch?v=WXI5NFqLNpo">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-3d.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+          <h2>Data Plotly</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/plotly_readme.png);">
+            <a class="source" href="https://github.com/ghtmtt/DataPlotly">Plotly QGIS</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/georgia_plotly.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georgia_plotly_select.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-data-plotly.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>temporal controller</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>show features from a layer only at the time that they appear</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first, open the temporal controller panel</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel-open.png);">
+        </div>
+
+        <div class="slide">
+            <h2>then, set a layer's temporal properties</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties-tab.png);">
+        </div>
+
+        <div class="slide">
+            <h2>this can work with any kind of feature (points, lines, polygons)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>all you need is a field with the start date and time</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-time.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-gif.png);">
+            <a href="https://www.gispo.fi/en/open-software/geogiffery-in-2020-with-qgis-temporal-controller/" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-menke.png);">
+            <a href="https://www.birdseyeviewgis.com/blog/2020/8/14/creating-a-covid-19-temporal-animation-with-qgis" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-time-series.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-time-series.png);">
+            <h2>time data in nhgis</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-gis-selection.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-gis-selection.png);">
+            <h2>get the year that matches</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-time-series-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-time-series-visualized.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nhgis-time-series-visualized.png);">
+            <h2>change in renters from 2000 to 2020</h2>
+        </div>
+
+        <div class="slide">
+            <h2>dot density maps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if you want to follow along, try using <a href="data/week11data.zip">this data</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/race-block-nyc.png);">
+            <a class="source" href="http://www.urbanresearchmaps.org/plurality/blockmaps.htm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/race-block-nyc.png);">
+            <h2>sometimes choropleths flatten data too much</h2>
+            <a class="source" href="http://www.urbanresearchmaps.org/plurality/blockmaps.htm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-atlanta.png);">
+            <a class="source" href="https://www.nytimes.com/interactive/2015/07/08/us/census-race-map.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-atlanta.png);">
+            <h2>a good dot density map can show more nuance</h2>
+            <a class="source" href="https://www.nytimes.com/interactive/2015/07/08/us/census-race-map.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-education.png);">
+            <a class="source" href="http://personal.tcu.edu/kylewalker/maps/education/colorsafe/#10.52/37.7588/-122.3156">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-chicago.png);">
+            <a class="source" href="http://www.radicalcartography.net/index.html?chicagodots">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-chicago-income.png);">
+            <a class="source" href="http://www.radicalcartography.net/index.html?chicagodots">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-us.png);">
+            <a class="source" href="https://demographics.virginia.edu/DotMap/index.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-nyc.png);">
+            <a class="source" href="https://demographics.virginia.edu/DotMap/index.html">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>how?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-0.png);">
+            <h2>you need polygons and a column of numeric data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-1a.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-1a.png);">
+            <h2>tell QGIS how many points to make</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-1a.png);">
+            <h2>sometimes this will be the value in the column itself</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-1a.png);">
+            <h2>sometimes you will want to do some math (eg divide by 100)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-2.png);">
+            <h2>keep in mind that you will have a new shapefile with the points you create</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-dot-density-2.png);">
+            <h2>style in a way that works for the scale you're displaying at</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dots-dasymetric-0.png);">
+            <a class="source" href="http://uxblog.idvsolutions.com/2013/10/dasymetric-dot-density-and-uncanny.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dots-dasymetric-1.png);">
+            <a class="source" href="http://uxblog.idvsolutions.com/2013/10/dasymetric-dot-density-and-uncanny.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-small-multiples.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/dot-density-small-multiples.png);">
+            <h2>sometimes this is a good time to consider small multiples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-1.png);">
+            <h2>update visible layers</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-2.png);">
+            <h2>copy-paste maps in the print layout toe ensure the same extent and scale</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/small-multiples-3.png);">
+            <h2>then lock layers for each</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-historical-ny.png);">
+            <a class="source" href="https://mappinghny.com/map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stamen-dot-density.png);">
+            <a class="source" href="https://stamen.com/mapping-historical-new-york-with-dot-density-maps/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+            <h2>what if I wanted to put this online without using a service?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+            <h2>creates a webmap out of a QGIS map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-exported.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-output.png);">
+            <h2>it outputs a folder of code that creates the webmap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-output.png);">
+            <h2>you can host this anywhere online</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github.png);">
+            <a class="source" href="https://github.com">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github.png);">
+            <h2>let's talk about using Github</h2>
+            <a class="source" href="https://github.com">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages.png);">
+            <a class="source" href="https://docs.github.com/en/pages">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages.png);">
+            <h2>specifically, Github Pages</h2>
+            <a class="source" href="https://docs.github.com/en/pages">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-new-repo.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-new-repo.png);">
+            <h2>create a new repo (basically a project)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-new-repo.png);">
+            <h2>the name will be in the URL, so pick one wisely</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-new-repo.png);">
+            <h2>check "Add README"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload-drop.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload-drop.png);">
+            <h2>wait until everything is uploaded</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload-drop.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages-config.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages-config.png);">
+            <h2>go to your repo settings and setup Pages</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-actions.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-actions.png);">
+            <h2>this will update as the site is deployed</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages-deployed.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages-success.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages-live.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload.png);">
+            <h2>you can always come back here and re-upload files</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-upload.png);">
+            <h2>I recommend uploading all of the files over again</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geolibre.png);">
+            <a class="source" href="https://web.geolibre.app/">geolibre</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geolibre-export.png);">
+            <a class="source" href="https://web.geolibre.app/">geolibre</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geolibre-story-map.png);">
+            <a class="source" href="https://web.geolibre.app/">geolibre</a>
+        </div>
+
+    </body>
+</html>
